@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Js1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Артем Цыганков JS1</h1>
+        
+        <button onClick="showTemp()">задание 1</button>
+        <button onClick="myFunc()">задание 2</button>
+        <button onClick="konk()">задание 3</button>
+        
+        <script type="text/javascript">
+            
+            //1) Задать температуру в градусах по Цельсию. 
+            // Вывести в alert соответствующую температуру в градусах по Фаренгейту. 
+            // Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, 
+            // c – температура по Цельсию
+            
+            var tc = 21; 
+            function showTemp () {
+                
+                alert(parseFloat((9 / 5) * (tc + 32))); 
+            }
+            
+            //2) Работа с переменными.
+            //3) Объявить две переменные: admin и name. Записать в name строку "Василий"; 
+            //Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).
+            
+            var name = 'Василий';
+            var admin = name;
+             
+                function myFunc(){
+                    alert(admin);
+                }
+            
+            //4) * Чему будет равно JS-выражение 1000 + "108";
+                // выведет 1000108 , это конкатенация, т.к. число суммируем со строкой
+                
+                function konk() {
+                    alert(1000 + "108");
+                }
+            //5 async и defer загружают скрипты ассинхронно, т.е. не дожидаясь загрузки DOM
+            // Отличаются тем, что async загружается - кто быстрее загрузился тот и первый. 
+            // defer - по порядку, как указано, вне зависимости от размера и выполнения.
+            
+            
+        </script>
+    </body>
+</html>
