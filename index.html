@@ -6,52 +6,76 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Js1</title>
+        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>Артем Цыганков JS1</h1>
-        
-        <button onClick="showTemp()">задание 1</button>
-        <button onClick="myFunc()">задание 2</button>
-        <button onClick="konk()">задание 3</button>
+        <div>TODO write content</div>
         
         <script type="text/javascript">
             
-            //1) Задать температуру в градусах по Цельсию. 
-            // Вывести в alert соответствующую температуру в градусах по Фаренгейту. 
-            // Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, 
-            // c – температура по Цельсию
             
-            var tc = 21; 
-            function showTemp () {
+            console.log(' ------------------ задание 1 --------------------');
+//1) С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+
+            function firstMission (iterations) {
+                let i = 1;
+                while (i <= iterations) {
+                    console.log(i);
+                    i++;
+                    if (i == iterations) {return i;}
+                }
                 
-                alert(parseFloat((9 / 5) * (tc + 32))); 
+            }
+
+            console.log(firstMission(100)); 
+            
+            console.log(' ------------------ задание 2 --------------------');
+//2) С помощью цикла do…while написать функцию для вывода чисел от 0 до 10, чтобы результат выглядел так:
+//0 – это ноль
+//1 – нечетное число
+//2 – четное число
+//3 – нечетное число
+//…
+//10 – четное число
+
+            function secondMission (iterations) {
+                let i = 0;
+                let s = '';
+                do {
+                    if(i === 0) {s = ' - это ноль';}
+                    if(i % 2 === 0 && i !== 0) {s = ' - четное число ';}
+                    if(i % 2 !== 0) {s = ' - нечетное число';}
+                    console.log (i + s);
+                    i++;
+                }
+                while (i <= iterations);
             }
             
-            //2) Работа с переменными.
-            //3) Объявить две переменные: admin и name. Записать в name строку "Василий"; 
-            //Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).
+            secondMission(10); // c нулем, получается 11 итераций :)
             
-            var name = 'Василий';
-            var admin = name;
-             
-                function myFunc(){
-                    alert(admin);
-                }
+            console.log(' ------------------ задание 3 --------------------');
             
-            //4) * Чему будет равно JS-выражение 1000 + "108";
-                // выведет 1000108 , это конкатенация, т.к. число суммируем со строкой
-                
-                function konk() {
-                    alert(1000 + "108");
-                }
-            //5 async и defer загружают скрипты ассинхронно, т.е. не дожидаясь загрузки DOM
-            // Отличаются тем, что async загружается - кто быстрее загрузился тот и первый. 
-            // defer - по порядку, как указано, вне зависимости от размера и выполнения.
+//3) * Вывести с помощью цикла for числа от 0 до 9, НЕ используя тело цикла. 
+//о есть выглядеть должно вот так:
+//for(…){// здесь пусто}
+
+            for(var i = 0; i <= 9; console.log(i++)) {} // разве такое когда - нибудь будет применяться ? )
             
+            console.log(' ------------------ задание 4 --------------------');
             
+//4) * Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+            
+            var arr = [];
+            
+            for (var i = 0; i <= 20; i++) {
+                arr.push('x');
+                console.log(arr);
+            }
+            
+
+
         </script>
     </body>
 </html>
